@@ -1,3 +1,4 @@
+
 package org_AkaChatEngine_backend.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -51,7 +52,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {  //Th
     public void registerStompEndpoints(StompEndpointRegistry registry) {//This method registers the endpoint where WebSocket (STOMP) clients connect to initiate a WebSocket connection.
 
         registry.addEndpoint("/chat")//connection establishment     // Register the WebSocket endpoint that clients will use to connect to the server
-                .setAllowedOrigins("http://localhost:5173") // Allow connections only from this specific origin (your frontend app URL) to prevent unauthorized access
+                .setAllowedOrigins("http://localhost:3000") // Allow connections only from this specific origin (your frontend app URL) to prevent unauthorized access
                 .withSockJS(); // Enable SockJS fallback options for browsers or environments that do not support native WebSockets
 
     }
